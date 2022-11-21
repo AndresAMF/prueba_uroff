@@ -33,6 +33,10 @@ p {
 .detailsImgContainer {
   width: 500px;
   height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 .detailsImg {
   max-width: 100%;
@@ -41,11 +45,15 @@ p {
 }
 .detailsContent {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .detailsName {
   font-size: 4rem;
   text-shadow: 2px 2px black;
   font-weight: bold;
+  margin: 0.5rem;
 }
 h3 {
   margin: 0.5rem;
