@@ -1,0 +1,60 @@
+body,
+h3,
+p {
+  margin: 0px;
+}
+
+.detailsContainer {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgb(251, 208, 63);
+  background: radial-gradient(
+    circle,
+    rgba(251, 208, 63, 1) 0%,
+    rgba(171, 72, 2, 1) 100%
+  );
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buttonBack {
+  margin: 1rem auto;
+  width: auto;
+  height: 2.5rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+.detailsImgContainer {
+  width: 500px;
+  height: 550px;
+}
+.detailsImg {
+  max-width: 100%;
+  max-height: 100%;
+  filter: drop-shadow(6px 8px 12px #585858);
+}
+.detailsContent {
+  color: white;
+}
+.detailsName {
+  font-size: 4rem;
+  text-shadow: 2px 2px black;
+  font-weight: bold;
+}
+h3 {
+  margin: 0.5rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px black;
+  background-color: brown;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 20px;
+  line-height: 1rem;
+  height: 1rem;
+}

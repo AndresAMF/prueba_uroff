@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
-import './styles.css'
+import { useNavigate } from "react-router-dom";
+import Banner from '../Banner'
+import "./styles.css";
 
 function Cards({ data }) {
-
   const [search, setSearch] = useState("");
   const [card, setCards] = useState([]);
+  let navigate = useNavigate();
 
   useEffect(() => {
     if (search === "") {
       setCards(data);
     } else {
-      let searchResults = data.filter((item) =>
-        item.name.toLowerCase().includes(search.toLowerCase()) ||
-        item.universe.toLowerCase().includes(search.toLowerCase())
+      let searchResults = data.filter(
+        (item) =>
+          item.name.toLowerCase().includes(search.toLowerCase()) ||
+          item.universe.toLowerCase().includes(search.toLowerCase())
       );
       setCards(searchResults);
     }
@@ -25,6 +28,7 @@ function Cards({ data }) {
 
   return (
     <>
+      <Banner/>
       <div className="searchBox">
         <input
           type="text"
@@ -42,6 +46,14 @@ function Cards({ data }) {
             <div className="cardImgContainer">
               <img className="cardImg" src={item.imageUrl} alt={item.name} />
             </div>
+            <button
+              className="button"
+              onClick={() => {
+                navigate(`details/${item.name}`);
+              }}
+            >
+              Detalles
+            </button>
           </div>
         ))}
       </div>
