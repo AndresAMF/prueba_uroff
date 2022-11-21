@@ -42,7 +42,7 @@ function Cards({ data }) {
         {card.map((item) => (
           <div className="card" key={item.id}>
             <p className="cardName">{item.name}</p>
-            <p className="cardUniverse">{item.universe}</p>
+            <p className="cardUniverse">Universo: {item.universe}</p>
             <div className="cardImgContainer">
               <img className="cardImg" src={item.imageUrl} alt={item.name} />
             </div>
